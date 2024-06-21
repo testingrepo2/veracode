@@ -33,6 +33,8 @@ on:
       - java-policy-scan
       - unidentified-lang-pipeline-scan
       - unidentified-lang-policy-scan
+      - ruby-pipeline-scan
+      - ruby-policy-scan
 
 jobs:
   register:
