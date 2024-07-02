@@ -15,7 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: veracode/scm-packaging:2.0.0
+      image: janthony1986/scm-packaging
+      #image: veracode/scm-packaging:2.0.0 
     env:
       VERACODE_API_KEY_ID: '${{ secrets.VERACODE_API_ID }}'
       VERACODE_API_KEY_SECRET: '${{ secrets.VERACODE_API_KEY }}'
