@@ -43,7 +43,8 @@ jobs:
 
   build-go-package:
     if: ${{ inputs.event_name == 'go-pipeline-scan' || inputs.event_name == 'go-policy-scan'  || inputs.event_name == 'go-sandbox-scan'}}
-    uses: ./.github/workflows/veracode-build-go.yml
+    uses: ./.github/workflows/veracode-default-build.yml   
+    #./.github/workflows/veracode-build-go.yml
     with:
       repository: ${{ inputs.repository }}
       ref: ${{ inputs.ref }}
@@ -75,7 +76,8 @@ jobs:
 
   build-scala-package:
     if: ${{ inputs.event_name == 'scala-pipeline-scan' || inputs.event_name == 'scala-policy-scan'  || inputs.event_name == 'scala-sandbox-scan'}}
-    uses: ./.github/workflows/veracode-build-scala.yml
+    uses: ./.github/workflows/veracode-default-build.yml    
+    #./.github/workflows/veracode-build-scala.yml
     with:
       repository: ${{ inputs.repository }}
       ref: ${{ inputs.ref }}
@@ -83,7 +85,8 @@ jobs:
 
   build-dart-package:
     if: ${{ inputs.event_name == 'dart-pipeline-scan' || inputs.event_name == 'dart-policy-scan'  || inputs.event_name == 'dart-sandbox-scan'}}
-    uses: ./.github/workflows/veracode-build-dart.yml
+    uses: ./.github/workflows/veracode-default-build.yml
+    #./.github/workflows/veracode-build-dart.yml
     with:
       repository: ${{ inputs.repository }}
       ref: ${{ inputs.ref }}
