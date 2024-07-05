@@ -1,6 +1,6 @@
 veracode_static_scan:
   push:
-    trigger: true
+    trigger: false
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
     # Leaving them both blank means this will never run
@@ -17,7 +17,7 @@ veracode_static_scan:
   # If the analysis_on_platform is set to true,
   # Veracode will save your last scan result, on the default branch, as an application profile with the same name as your scanned repository on the Veracode platform. 
   # If the analysis_on_platform is set to false, scan results will not be saved to the Veracode platform.
-  analysis_on_platform: false
+  analysis_on_platform: true
   # If break_build_policy_findings is set to true, the build will break when findings violate the policy.
   break_build_policy_findings: true
   # If break_build_invalid_policy is set to true, the build will break when the policy name is invalid.
@@ -40,7 +40,7 @@ veracode_static_scan:
 
 veracode_sca_scan:
   push:
-    trigger: true
+    trigger: false
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
     # Leaving them both blank means this will never run
@@ -48,7 +48,7 @@ veracode_sca_scan:
       - '*'
     branches_to_exclude:
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
@@ -67,7 +67,7 @@ veracode_sca_scan:
 
 veracode_iac_secrets_scan:
   push:
-    trigger: true
+    trigger: false
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
     # Leaving them both blank means this will never run
@@ -75,7 +75,7 @@ veracode_iac_secrets_scan:
       - '*'
     branches_to_exclude:
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
