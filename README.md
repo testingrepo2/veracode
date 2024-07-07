@@ -10,7 +10,7 @@ This README explains the steps required to configure your Veracode scans and vie
 
 ## Language support
 
-The GitHub Workflow Integration supports scanning repositories written in the following languages:
+The GitHub Workflow Integration supports scanning repositories written in the following languages: 
 
 | Language         | Static Support | SCA Support |
 |------------------|----------------|-------------|
